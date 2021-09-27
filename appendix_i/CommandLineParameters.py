@@ -9,7 +9,7 @@ f.close
 f = open(sys.argv[1],"r")
 content = f.read()
 f.close
-print content
+print( content )
  
 # append some text to the file
 f = open(sys.argv[1],"a")

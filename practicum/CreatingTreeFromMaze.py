@@ -19,9 +19,9 @@ def create_tree(maze):
             if maze[i][j]: tree[(i,j)] = []
     # now for all elements of the tree we populated
     # lists with indices of surrounding path elements:
-    print width, height
+    print( width, height )
     for e in tree:
-        print e
+        print( e )
         i,j = e[0], e[1]
         if is_inside((i-1,j),width,height):
             if maze[i-1][j]: tree[e].append((i-1,j))
@@ -39,5 +39,5 @@ maze = [[x=="1" for x in line] for line in f.read().split("\n") if len(line)>0]
 
 tree = create_tree(maze)
 
-print tree
+print( tree )
 
